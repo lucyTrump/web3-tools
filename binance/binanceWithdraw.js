@@ -93,8 +93,13 @@ function readWithdrawHistoryFile() {
       // await withdraw("USDC", address, Number(Number(amount) + Fees).toFixed(2), "ARBITRUM");
 
       // arbitrum 链 ETH
+      // const Fees = 0;
+      // await withdraw("ETH", address, Number(Number(amount) + Fees), "ARBITRUM");
+      // console.log(`提币到地址 ${address} 成功！`);
+
+      // arbitrum 链 ETH
       const Fees = 0;
-      await withdraw("ETH", address, Number(Number(amount) + Fees), "ARBITRUM");
+      await withdraw("ETH", address, Number(Number(amount) + Fees), "ETH");
       console.log(`提币到地址 ${address} 成功！`);
       // // 等待 1.5 秒以避免请求过于频繁
       await new Promise((resolve) => setTimeout(resolve, 3_000));
